@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+memory.db
+thumbnails/
+lelamp/memory/models/
+lelamp/perception/models/
+.env
+.gstack/
