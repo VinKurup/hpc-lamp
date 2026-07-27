@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>LeLamp</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #101014; }
+    #status {
+      position: fixed; top: 10px; left: 10px;
+      color: #9a9aa5; font: 12px/1.4 monospace; pointer-events: none;
+    }
+    #chat {
+      position: fixed; bottom: 14px; left: 14px; width: 340px;
+      font: 13px/1.5 monospace; color: #d5d5dd;
+    }
+    #chatlog { max-height: 200px; overflow-y: auto; margin-bottom: 6px; }
+    #chatlog div { margin: 2px 0; text-shadow: 0 1px 3px #000; }
+    #chatlog .you { color: #8ab4f8; }
+    #chatlog .lamp { color: #ffe9a8; }
+    #chatbox {
+      flex: 1; box-sizing: border-box; padding: 6px 8px;
+      background: rgba(28, 28, 36, 0.85); color: #e8e8ee;
+      border: 1px solid #3a3a46; border-radius: 6px; outline: none;
+      font: inherit;
+    }
+    #chatrow { display: flex; gap: 6px; }
+    #micbtn {
+      padding: 6px 10px; background: rgba(28, 28, 36, 0.85); color: #e8e8ee;
+      border: 1px solid #3a3a46; border-radius: 6px; cursor: pointer;
+      font: inherit; user-select: none; -webkit-user-select: none;
+    }
+    #micbtn.recording { background: #7a2530; border-color: #c04050; }
+  </style>
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+  </script>
+</head>
+<body>
+  <div id="status">connecting…</div>
+  <div id="chat">
+    <div id="chatlog"></div>
+    <div id="chatrow">
+      <input id="chatbox" placeholder="ask the lamp… (e.g. where's my cup?)" autocomplete="off" />
+      <button id="micbtn" title="hold to talk">🎤</button>
+    </div>
+  </div>
+  <script type="module" src="lamp.js"></script>
+</body>
+</html>
