@@ -1,0 +1,11 @@
+# M0 — scaffolding + viz bridge. Conversation deps land with M4.
+fastapi>=0.110
+uvicorn[standard]>=0.29
+# M2 — camera perception (opencv comes with mediapipe)
+mediapipe>=0.10.35
+# M3 — object detection for memory
+ultralytics>=8.4
+# M4 — conversation via OpenRouter (OpenAI-compatible)
+openai>=1.60
+# M4 v2 — push-to-talk STT (TTS is macOS `say`)
+faster-whisper>=1.1
